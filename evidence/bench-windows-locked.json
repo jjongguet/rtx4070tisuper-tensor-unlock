@@ -1,0 +1,247 @@
+{
+  "schema": "ada-tensor-bench/1",
+  "timestamp_utc": "2026-10-19T16:40:17+00:00",
+  "host": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.0",
+    "nvcc": "Build cuda_12.8.r12.8/compiler.35404655_0",
+    "arch": "sm_89",
+    "runs": 9,
+    "threads_swept": [
+      256,
+      512,
+      1024
+    ],
+    "elapsed_s": 21.2
+  },
+  "device": {
+    "name": "NVIDIA GeForce RTX 4070 Ti SUPER",
+    "sms": 66,
+    "cc_major": 8,
+    "cc_minor": 9,
+    "clock_rate_khz": 2610000,
+    "memory_clock_khz": 10501000,
+    "global_mem_mb": 16375,
+    "persisting_l2_mb": 33
+  },
+  "variants": [
+    {
+      "name": "mma.m16n8k16.f32.f16.f16.f32",
+      "unit": "FLOP",
+      "spec_ops_per_cycle_sm": 512,
+      "best": {
+        "threads": 1024,
+        "iters": 76171,
+        "ms": 64.982018,
+        "tflops": 81.1223,
+        "flop_per_cycle_sm": 441.74,
+        "cycles_per_mma": 9.2724,
+        "clock_ghz": 2.7825
+      },
+      "best_x4": {
+        "threads": 512,
+        "tflops": 82.8837,
+        "flop_per_cycle_sm": 451.816,
+        "cycles_per_mma": 9.0656
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 436.015,
+      "worst_flop_per_cycle_sm": 421.125,
+      "spread_pct": 4.9,
+      "pct_of_spec": 86.3,
+      "pct_of_spec_median": 85.2,
+      "pct_of_spec_x4": 88.2
+    },
+    {
+      "name": "mma.m16n8k16.f32.bf16.bf16.f32",
+      "unit": "FLOP",
+      "spec_ops_per_cycle_sm": 512,
+      "best": {
+        "threads": 512,
+        "iters": 76171,
+        "ms": 32.573441,
+        "tflops": 80.917,
+        "flop_per_cycle_sm": 440.685,
+        "cycles_per_mma": 9.2946,
+        "clock_ghz": 2.7821
+      },
+      "best_x4": {
+        "threads": 512,
+        "tflops": 81.7491,
+        "flop_per_cycle_sm": 444.964,
+        "cycles_per_mma": 9.2052
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 435.313,
+      "worst_flop_per_cycle_sm": 426.664,
+      "spread_pct": 3.3,
+      "pct_of_spec": 86.1,
+      "pct_of_spec_median": 85.0,
+      "pct_of_spec_x4": 86.9
+    },
+    {
+      "name": "mma.m16n8k16.f16.f16.f16.f16",
+      "unit": "FLOP",
+      "spec_ops_per_cycle_sm": 1024,
+      "best": {
+        "threads": 256,
+        "iters": 76171,
+        "ms": 7.901248,
+        "tflops": 166.793,
+        "flop_per_cycle_sm": 908.578,
+        "cycles_per_mma": 4.5081,
+        "clock_ghz": 2.7815
+      },
+      "best_x4": {
+        "threads": 256,
+        "tflops": 161.1892,
+        "flop_per_cycle_sm": 878.164,
+        "cycles_per_mma": 4.6643
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 847.092,
+      "worst_flop_per_cycle_sm": 826.651,
+      "spread_pct": 9.9,
+      "pct_of_spec": 88.7,
+      "pct_of_spec_median": 82.7,
+      "pct_of_spec_x4": 85.8
+    },
+    {
+      "name": "mma.m16n8k8.f32.tf32.tf32.f32",
+      "unit": "FLOP",
+      "spec_ops_per_cycle_sm": 256,
+      "best": {
+        "threads": 256,
+        "iters": 76171,
+        "ms": 15.843328,
+        "tflops": 41.5908,
+        "flop_per_cycle_sm": 226.939,
+        "cycles_per_mma": 9.0244,
+        "clock_ghz": 2.7768
+      },
+      "best_x4": {
+        "threads": 1024,
+        "tflops": 40.742,
+        "flop_per_cycle_sm": 222.188,
+        "cycles_per_mma": 9.2174
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 218.78,
+      "worst_flop_per_cycle_sm": 215.682,
+      "spread_pct": 5.2,
+      "pct_of_spec": 88.6,
+      "pct_of_spec_median": 85.5,
+      "pct_of_spec_x4": 86.8
+    },
+    {
+      "name": "mma.m16n8k32.s32.s8.s8.s32",
+      "unit": "OPS",
+      "spec_ops_per_cycle_sm": 2048,
+      "best": {
+        "threads": 512,
+        "iters": 76171,
+        "ms": 16.499712,
+        "tflops": 319.4899,
+        "flop_per_cycle_sm": 1751.322,
+        "cycles_per_mma": 4.6776,
+        "clock_ghz": 2.7641
+      },
+      "best_x4": {
+        "threads": 256,
+        "tflops": 343.9622,
+        "flop_per_cycle_sm": 1881.519,
+        "cycles_per_mma": 4.3539
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 1728.508,
+      "worst_flop_per_cycle_sm": 1629.579,
+      "spread_pct": 7.5,
+      "pct_of_spec": 85.5,
+      "pct_of_spec_median": 84.4,
+      "pct_of_spec_x4": 91.9
+    },
+    {
+      "name": "mma.m16n8k32.f32.e4m3.e4m3.f32",
+      "unit": "FLOP",
+      "spec_ops_per_cycle_sm": 2048,
+      "best": {
+        "threads": 512,
+        "iters": 76171,
+        "ms": 31.502337,
+        "tflops": 167.3365,
+        "flop_per_cycle_sm": 914.447,
+        "cycles_per_mma": 8.9584,
+        "clock_ghz": 2.7726
+      },
+      "best_x4": {
+        "threads": 256,
+        "tflops": 171.2944,
+        "flop_per_cycle_sm": 932.964,
+        "cycles_per_mma": 8.7806
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 873.878,
+      "worst_flop_per_cycle_sm": 780.436,
+      "spread_pct": 17.2,
+      "pct_of_spec": 44.7,
+      "pct_of_spec_median": 42.7,
+      "pct_of_spec_x4": 45.6
+    },
+    {
+      "name": "fma.rn.f32 (SIMT control)",
+      "unit": "FLOP",
+      "spec_ops_per_cycle_sm": 256,
+      "best": {
+        "threads": 256,
+        "iters": 609375,
+        "ms": 16.387232,
+        "tflops": 40.2108,
+        "flop_per_cycle_sm": 220.147,
+        "cycles_per_mma": 0.0091,
+        "clock_ghz": 2.7675
+      },
+      "best_x4": {
+        "threads": 256,
+        "tflops": 43.3477,
+        "flop_per_cycle_sm": 237.257,
+        "cycles_per_mma": 0.0084
+      },
+      "observations": 9,
+      "median_flop_per_cycle_sm": 193.324,
+      "worst_flop_per_cycle_sm": 182.502,
+      "spread_pct": 20.6,
+      "pct_of_spec": 86.0,
+      "pct_of_spec_median": 75.5,
+      "pct_of_spec_x4": 92.7
+    }
+  ],
+  "gemm": {
+    "n": 8192,
+    "bf16_f32acc_tflops": 78.697,
+    "f16_f32acc_tflops": 78.2839,
+    "f16_f16acc_tflops": 161.9032,
+    "tf32_tflops": 38.9729,
+    "fp8_e4m3_tflops": -1.0,
+    "bf16_pct_of_peak": 83.9,
+    "f16_f16acc_pct_of_peak": 86.3,
+    "tf32_pct_of_peak": 83.1,
+    "fp8_pct_of_peak": null
+  },
+  "peaks": {
+    "clock_ghz_measured": 2.7768,
+    "fp16_f32acc_half_rate_tflops": 93.83,
+    "fp16_f16acc_tflops": 187.67,
+    "tf32_tflops": 46.92,
+    "int8_tops": 375.33,
+    "fp8_tflops_published": 375.33,
+    "fp32_simt_tflops": 46.92
+  },
+  "nvml": {
+    "samples": 341,
+    "sm_clock_mhz_median": 2790,
+    "sm_clock_mhz_max": 2790,
+    "power_w_median": 111.0,
+    "power_w_max": 151.5,
+    "temp_c_max": 60
+  }
+}

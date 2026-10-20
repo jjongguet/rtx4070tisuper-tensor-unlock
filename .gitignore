@@ -1,0 +1,12 @@
+*.bin
+*.rom
+*.run
+*.efi
+*.ko
+*.o
+*.mod
+*.mod.c
+__pycache__/
+.venv/
+build/
+dist/

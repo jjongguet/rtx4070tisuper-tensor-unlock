@@ -1,0 +1,17 @@
+# UEFI pre-OS fire — sanitized success log
+# Linux 7.0 / NVIDIA 615.71.09, RTX 4070 Ti SUPER (AD103)
+
+entry: plm=0xffffff8f ss0=0x45576045 ss1=0x7 wpr2_hi=0x0
+FWSEC: WPR2 set
+Falcon DMA padding: data 0xd80 -> 0xe00
+Falcon: FWSEC started
+FWSEC: WPR2 published
+Booter: SEC2 start
+Booter: PLM opened
+selector write: SS0=0x88888888
+selector write: SS1=0x8
+pre-FLR selectors: SS0=0x88888888 SS1=0x8
+PCIe FLR: returned
+post-FLR: SS0=0x88888888 SS1=0x8
+post-FLR: WPR2 high=0
+RESULT: FIRE SUCCESS — PLM=0xffffffff SS0=0x88888888 SS1=0x8
